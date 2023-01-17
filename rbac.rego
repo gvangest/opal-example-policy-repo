@@ -1,8 +1,8 @@
 package opa
 
-import data.public
-import data.ce
-import data.chro
+import data.policies.public
+import data.policies.ce
+import data.policies.chro
 
 # Not authorized by default
 default authorized = false

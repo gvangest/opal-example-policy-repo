@@ -1,4 +1,4 @@
-package ce
+package policies.ce
 
 # CE API requires authenticated user
 deny["ce_api_authenticated"] {

@@ -1,4 +1,4 @@
-package chro
+package policies.chro
 
 # CHRO API requires authenticated user
 deny["chro_api_authenticated"] {

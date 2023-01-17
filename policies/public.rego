@@ -1,4 +1,4 @@
-package public
+package policies.public
 
 # Allow access to /public
 allow["public"] {
