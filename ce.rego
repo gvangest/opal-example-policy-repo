@@ -9,5 +9,5 @@ deny["ce_api_authenticated"] {
 # Authorize access to CE
 allow["ce_api_authorized"] {
     regex.match("^/ce/.+",input.uri)
-    input.authorities[i] == "SCOPE_profileg"
+    input.authorities[i] == "SCOPE_profile"
 }
