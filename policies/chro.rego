@@ -10,4 +10,10 @@ deny["chro_api_authenticated"] {
 allow["chro_api_authorized"] {
     regex.match("^/chro/.+",input.uri)
     input.authorities[i] == "SCOPE_profile"
+    can_view_chro
+}
+
+can_view_chro {
+    some i
+    data.teams[i].username == input.principal
 }
