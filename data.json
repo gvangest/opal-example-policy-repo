@@ -1,73 +1,54 @@
 {
-  "users": {
-    "alice": {
-      "roles": ["admin"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
+  "teams":[
+    {
+      "label": "Cindy Rummens",
+      "username": "ON123",
+      "agreementID": "1234567",
+      "members":[
+        {
+          "username": "ON567",
+          "agreementID": "8973483"
+        },
+        {
+          "username": "ON890",
+          "agreementID": "7392487"
+        },
+        {
+          "username": "ON768",
+          "agreementID": "3847323"
+        }
+      ]
     },
-    "bob": {
-      "roles": ["employee", "billing"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-    "eve": {
-      "roles": ["customer"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
+    {
+      "label": "Inge Claes",
+      "username": "ON768",
+      "agreementID": "3847323",
+      "members":[
+        {
+          "username": "ON324",
+          "agreementID": "3423254"
+        },
+        {
+          "username": "ON873",
+          "agreementID": "9845445"
+        }
+      ]
     }
-  },
-  "role_permissions": {
-    "customer": [
-      {
-        "action": "read",
-        "type": "dog"
-      },
-      {
-        "action": "read",
-        "type": "cat"
-      },
-      {
-        "action": "adopt",
-        "type": "dog"
-      },
-      {
-        "action": "adopt",
-        "type": "cat"
-      }
-    ],
-    "employee": [
-      {
-        "action": "read",
-        "type": "dog"
-      },
-      {
-        "action": "read",
-        "type": "cat"
-      },
-      {
-        "action": "update",
-        "type": "dog"
-      },
-      {
-        "action": "update",
-        "type": "cat"
-      }
-    ],
-    "billing": [
-      {
-        "action": "read",
-        "type": "finance"
-      },
-      {
-        "action": "update",
-        "type": "finance"
-      }
-    ]
-  }
+  ],
+  "FineGrainedSecurity":[
+    {
+      "username": "ON562",
+      "agreementID": "3647323",
+      "members":[
+        {
+          "username": "ON324",
+          "agreementID": "3423254"
+        },
+        {
+          "username": "ON768",
+          "agreementID": "3847323"
+        }
+      ]
+    }
+  ]
 }
