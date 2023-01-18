@@ -9,5 +9,5 @@ deny["chro_api_authenticated"] {
 # Authorize access to CHRO
 allow["chro_api_authorized"] {
     regex.match("^/chro/.+",input.uri)
-    input.authorities[i] == "SCOPE_chro"
+    input.authorities[i] == "SCOPE_profile"
 }
