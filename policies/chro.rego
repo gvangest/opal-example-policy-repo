@@ -26,3 +26,12 @@ can_view_chro {
     lower(data.teams[i].username) == input.principal
     lower(data.teams[i].members[j].username) == user
 }
+
+can_view_chro {
+    user := split(input.uri, "/")[2]
+    some i, j, k, l
+    # team lead can view chro for nested team member
+    lower(data.teams[i].username) == input.principal
+    data.teams[i].members[j].username == data.teams[k].username
+    lower(data.teams[k].members[l].username) == user
+}
