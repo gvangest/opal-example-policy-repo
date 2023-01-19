@@ -14,8 +14,13 @@ allow["chro_api_authorized"] {
 }
 
 can_view_chro[user] {
+    # can view own chro
+    user == input.principal
+}
+
+can_view_chro[user] {
     some i, j
-    # team lead can see chro for team member
+    # team lead can view chro for team member
     lower(data.teams[i].username) == input.principal
     lower(data.teams[i].members[j].username) == user
 }
