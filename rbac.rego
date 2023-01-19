@@ -1,4 +1,4 @@
-package policies.chro
+package opa
 
 deny["chro_api_authenticated"] {
     # CHRO API requires authenticated user
