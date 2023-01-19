@@ -11,7 +11,10 @@ allow["chro_api_authorized"] {
     regex.match("^/chro/.+",input.uri)
     input.authorities[i] == "SCOPE_profile"
     user := split(input.uri, "/")[2]
-    user == input.principal
+    some i, j
+    # team lead can view chro for team member
+    lower(data.teams[i].username) == input.principal
+    lower(data.teams[i].members[j].username) == user
 }
 
 can_view_chro[user] {
