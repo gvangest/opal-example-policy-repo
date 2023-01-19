@@ -10,7 +10,6 @@ deny["chro_api_authenticated"] {
 allow["chro_api_authorized"] {
     regex.match("^/chro/.+",input.uri)
     input.authorities[h] == "SCOPE_profiles"
-    user := split(input.uri, "/")[2]
 }
 
 can_view_chro[user] {
