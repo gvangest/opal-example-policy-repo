@@ -9,7 +9,7 @@ deny["chro_api_authenticated"] {
 # Authorize access to CHRO
 allow["chro_api_authorized"] {
     regex.match("^/chro/.+",input.uri)
-    input.authorities[i] == "SCOPE_profile"
+    input.authorities[h] == "SCOPE_profile"
     user := split(input.uri, "/")[2]
     some i, j
     # team lead can view chro for team member
