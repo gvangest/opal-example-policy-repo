@@ -15,5 +15,5 @@ allow["chro_api_authorized"] {
 
 can_view_chro {
     some i
-    data.teams[i].username == input.principal
+    lower(data.teams[i].username) == input.principal
 }
