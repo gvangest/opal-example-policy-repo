@@ -13,7 +13,7 @@ allow["chro_api_authorized"] {
 }
 
 deny["chro_api_fgs"] {
-    regex.match("^/chro/.*",input.uri)
+    regex.match("^/chro/.+",input.uri)
     input.authorities[i] == "SCOPE_profile"
     limited_by_fgs
 }
